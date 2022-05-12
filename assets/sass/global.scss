@@ -23,6 +23,9 @@ div.main {
   height: 500px;
   background-color: #fff;
   border-radius: 15px;
+  -webkit-box-shadow: 5px 5px 30px -1px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 5px 5px 30px -1px rgba(0, 0, 0, 0.22);
+  box-shadow: 5px 5px 30px -1px rgba(0, 0, 0, 0.22);
 
   // CHAT BOX HEADER
   .header {
@@ -92,12 +95,14 @@ div.main {
     display: flex;
     justify-content: space-between;
     padding: 0 15px 0 0;
+    border-radius: 0 0 15px 15px;
 
     input {
       height: 35px;
       padding: 0 0 0 15px;
       border: 0;
       width: 80%;
+      border-radius: 0 0 15px 15px;
     }
 
     input:focus {
@@ -107,6 +112,11 @@ div.main {
     img {
       width: 24px;
       opacity: 0.3;
+      cursor: pointer;
+    }
+
+    img:hover {
+      opacity: 0.6;
     }
   }
 }
