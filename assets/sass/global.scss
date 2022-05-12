@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Nunito Sans';
+  font-weight: 400;
+  font-size: 18px;
+}
+
+div.main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgray;
+}
+
+// MAIN CHAT DIV
+.chat {
+  width: 300px;
+  height: 500px;
+  background-color: #fff;
+  border-radius: 15px;
+
+  // CHAT BOX HEADER
+  .header {
+    background-color: #1b53d0;
+    padding: 20px 15px;
+    border-radius: 15px 15px 0 0;
+  }
+
+  // CHAT BOX TITLE
+  .title {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  // CHAT BODY
+  .body {
+    height: 370px;
+    background-color: #f4f4f4;
+    overflow: scroll;
+    padding: 0 0 25px 0;
+
+    // CHAT MESSAGE WRAPPER
+    .msg_wrapper {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .text {
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    // USER MESSAGE WRAPPER
+    .msg_own {
+      justify-content: end;
+
+      .text {
+        margin: 20px 15px 0 0;
+        background-color: #4356e1;
+        color: #fff;
+      }
+    }
+
+    // BOT MESSAGE WRAPPER
+    .msg_bot {
+      align-items: end;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+
+      .text {
+        margin: 20px 15px 0 10px;
+        background-color: #fff;
+        color: #000;
+      }
+
+      .picture {
+        width: 55px;
+        border-radius: 5000px;
+        margin: 0 0 0 20px;
+      }
+    }
+  }
+
+  form {
+    height: 40px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px 0 0;
+
+    input {
+      height: 35px;
+      padding: 0 0 0 15px;
+      border: 0;
+      width: 80%;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    img {
+      width: 24px;
+      opacity: 0.3;
+    }
+  }
+}

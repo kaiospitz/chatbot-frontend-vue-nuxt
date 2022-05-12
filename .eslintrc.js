@@ -21,7 +21,7 @@ module.exports = {
         allowModifiers: true,
       },
     ],
-    'max-lines-per-function': ['error', 20],
+    'max-lines-per-function': [0, 30],
   },
   globals: {
     _: true,

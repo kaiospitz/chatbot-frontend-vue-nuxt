@@ -1,5 +1,5 @@
 {
-  "name": "app",
+  "name": "frontend",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -36,6 +36,8 @@
     "eslint-plugin-vue": "^8.2.0",
     "jest": "^27.4.4",
     "prettier": "^2.5.1",
+    "sass": "^1.51.0",
+    "sass-loader": "^10.1.1",
     "vue-jest": "^3.0.4"
   }
 }
