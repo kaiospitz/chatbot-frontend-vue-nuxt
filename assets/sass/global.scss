@@ -19,10 +19,14 @@ div.main {
 
 // MAIN CHAT DIV
 .chat {
-  width: 300px;
-  height: 500px;
+  width: 600px;
+  max-width: 90vw;
+  height: 620px;
+  max-height: 80vh;
   background-color: #fff;
   border-radius: 15px;
+  display: flex;
+  flex-direction: column;
   -webkit-box-shadow: 5px 5px 30px -1px rgba(0, 0, 0, 0.22);
   -moz-box-shadow: 5px 5px 30px -1px rgba(0, 0, 0, 0.22);
   box-shadow: 5px 5px 30px -1px rgba(0, 0, 0, 0.22);
@@ -42,7 +46,7 @@ div.main {
 
   // CHAT BODY
   .body {
-    height: 370px;
+    flex-grow: 1;
     background-color: #f4f4f4;
     overflow: scroll;
     padding: 0 0 25px 0;
@@ -118,5 +122,109 @@ div.main {
     img:hover {
       opacity: 0.6;
     }
+  }
+
+  .chatTypingWrapper {
+    display: flex;
+    align-items: flex-end;
+
+    img {
+      width: 55px;
+      border-radius: 5000px;
+      margin: 0 0 0 20px;
+    }
+
+    .dotsWrapper {
+      margin: 20px 15px 0 10px;
+      background-color: #fff;
+      width: 85px;
+      height: 50px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+/**
+ * ==============================================
+ * Dot Pulse
+ * ==============================================
+ */
+.dot-pulse {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #4356e1;
+  color: #4356e1;
+  box-shadow: 9999px 0 0 -5px #4356e1;
+  animation: dotPulse 1.5s infinite linear;
+  animation-delay: 0.25s;
+}
+
+.dot-pulse::before,
+.dot-pulse::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #4356e1;
+  color: #4356e1;
+}
+
+.dot-pulse::before {
+  box-shadow: 9984px 0 0 -5px #4356e1;
+  animation: dotPulseBefore 1.5s infinite linear;
+  animation-delay: 0s;
+}
+
+.dot-pulse::after {
+  box-shadow: 10014px 0 0 -5px #4356e1;
+  animation: dotPulseAfter 1.5s infinite linear;
+  animation-delay: 0.5s;
+}
+
+@keyframes dotPulseBefore {
+  0% {
+    box-shadow: 9984px 0 0 -5px #4356e1;
+  }
+  30% {
+    box-shadow: 9984px 0 0 2px #4356e1;
+  }
+  60%,
+  100% {
+    box-shadow: 9984px 0 0 -5px #4356e1;
+  }
+}
+
+@keyframes dotPulse {
+  0% {
+    box-shadow: 9999px 0 0 -5px #4356e1;
+  }
+  30% {
+    box-shadow: 9999px 0 0 2px #4356e1;
+  }
+  60%,
+  100% {
+    box-shadow: 9999px 0 0 -5px #4356e1;
+  }
+}
+
+@keyframes dotPulseAfter {
+  0% {
+    box-shadow: 10014px 0 0 -5px #4356e1;
+  }
+  30% {
+    box-shadow: 10014px 0 0 2px #4356e1;
+  }
+  60%,
+  100% {
+    box-shadow: 10014px 0 0 -5px #4356e1;
   }
 }
