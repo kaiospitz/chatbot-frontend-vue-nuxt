@@ -6,6 +6,8 @@ body {
   font-family: 'Nunito Sans';
   font-weight: 400;
   font-size: 18px;
+  height: 100%;
+  overflow: hidden;
 }
 
 div.main {
@@ -22,7 +24,7 @@ div.main {
   width: 600px;
   max-width: 90vw;
   height: 620px;
-  max-height: 80vh;
+  max-height: 90vh;
   background-color: #fff;
   border-radius: 15px;
   display: flex;
@@ -143,6 +145,24 @@ div.main {
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .chat {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 97vh;
+    border-radius: 0;
+
+    .header {
+      border-radius: 0;
+    }
+
+    form {
+      flex-grow: 1;
     }
   }
 }

@@ -50,7 +50,7 @@
         placeholder="Write your message..."
         required
       />
-      <img src="~assets/icons/send.svg" />
+      <img src="~assets/icons/send.svg" @click="sendMessage()" />
     </form>
   </div>
 </template>
