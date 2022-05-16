@@ -1,3 +1,5 @@
+/* eslint-disable vue/no-v-html */
+
 <template>
   <div class="chat">
     <div class="header">
@@ -12,13 +14,11 @@
         class="msg_wrapper"
         :class="JSON.parse(item).sender === 'bot' ? 'msg_bot' : 'msg_own'"
       >
-        <!-- eslint-disable vue/no-v-html -->
         <span
           v-if="JSON.parse(item).listResponse === true"
           class="text"
           v-html="JSON.parse(item).message"
         >
-          <!-- eslint-enable -->
         </span>
 
         <span v-if="JSON.parse(item).listResponse === false" class="text">
@@ -97,7 +97,7 @@ export default {
         this.loading = true
         this.addMessage(this.message, 'user', false)
         this.$axios
-          .post('https://api.kaiospitz.com.br/messages', {
+          .post('http://localhost:8000/api/messages', {
             message: this.message,
             sessionId: this.sessionId,
           })
